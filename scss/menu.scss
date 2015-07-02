@@ -1,0 +1,130 @@
+// Menu 
+.nav {
+	position:fixed;
+	z-index:1000;
+	top:-10px;
+	left:16px;
+	-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   	backface-visibility: hidden;
+	padding:10px;
+	min-width:160px;
+	
+	text-transform:uppercase;
+	.logo_wrap {
+		&:hover {
+			cursor:pointer;
+		}
+		background-color:$menu_gray;
+		height: 60px;
+		width: 170px;
+		padding:11px 11px 11px 15px;
+		display:block;
+		#btn_logo {
+			display:block;
+			float:left;
+			height: 39px;
+			width: 75px;
+			background-image:url("./img/logo@2x.png");
+			//background-image:url("./img/logo.svg");
+			background-repeat:no-repeat;
+			background-size:contain;
+			text-indent:-999em;
+
+		}
+		#btn_menu {
+			float:left;
+			width:36px;
+			margin-left: 27px;
+			margin-top:9px;
+
+			.orange {
+				background-color:white;
+			}
+			.red {
+				
+				background-color:white;
+			}
+			span {
+				@include transition(all .6s cubic-bezier(0.4, 0.01, 0.165, 0.99));
+				//@include animation-direction(alternate-reverse);
+				margin-bottom:10px;
+				display:block;
+				width:36px;
+				height:5px;
+			}
+			.orange {
+				//@include animation(menuBtn .6s alternate);
+				
+				//@include transform(translateY(0px) rotateZ(0));
+			}
+			.red {
+
+			}
+		}
+		#btn_menu.active {
+			.orange {
+				//@include transform(0.4s );
+				@include transform(rotateZ(45deg) translate3d(0, -10px, 0));
+			}
+			.red {
+				@include transform(rotateZ(-45deg) translate3d(0, 10px, 0));
+			}
+			
+		}
+	}
+	ul#menu {
+		padding:8px 16px 8px 16px;
+		margin-top:1px;
+		background-color:rgb(101,98,100);
+		display:block;
+		@include transition(all .27s cubic-bezier(0.000, 0.000, 0.580, 1.000));
+		// transition
+		@include transform(perspective(200px) rotateX(0deg) scale(.6));
+		opacity:0;
+		li {
+			font-size:13px;
+			margin-bottom:8px;
+			width:100%;
+			&:first-child {
+				margin-top:14px;
+			}
+			a {
+				@include transition(color .1s ease-in);
+				font-family:$sans-serif;
+
+				letter-spacing:1px;
+				font-weight:500;
+				font-style:normal;
+				color:$text-light-gray;
+				&:hover {
+					color:white;
+					font-weight:500;
+				}
+			}
+			
+			.active {color:white;}
+
+		}
+		.social {
+			margin-top: 18px;
+
+			height:10px;
+			a {
+
+				display:block;
+				float:left;	
+				margin-right:10px;	
+				color:white;
+				&:hover {
+					opacity:.9
+				}
+			}
+		}
+	}
+	ul#menu.on {
+
+		//transition
+		@include transform(perspective(200px) rotateX(0deg) scale(1));
+		opacity:1;
+	}
+}

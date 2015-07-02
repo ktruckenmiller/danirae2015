@@ -1,0 +1,384 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+#mfPreviewBar {
+  display: none !important; }
+
+a, p, h1, h2, h3, h4, h5, li, td {
+  font-family: "Cochin";
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+body {
+  margin: 0;
+  font-family: "Cochin"; }
+
+.fs {
+  min-height: 100vh;
+  width: 100%; }
+
+.caps {
+  text-transform: uppercase; }
+
+.test {
+  position: fixed;
+  background-color: blue;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  opacity: .2; }
+
+.nav {
+  position: fixed;
+  z-index: 1000;
+  top: -10px;
+  left: 16px;
+  padding: 10px;
+  min-width: 160px;
+  text-transform: uppercase; }
+  .nav .logo_wrap {
+    background-color: #887f82;
+    height: 60px;
+    width: 170px;
+    padding: 11px 11px 11px 15px;
+    display: block; }
+    .nav .logo_wrap:hover {
+      cursor: pointer; }
+    .nav .logo_wrap #btn_logo {
+      display: block;
+      float: left;
+      height: 39px;
+      width: 75px;
+      background-image: url("./img/logo@2x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-indent: -999em; }
+    .nav .logo_wrap #btn_menu {
+      float: left;
+      width: 36px;
+      margin-left: 27px;
+      margin-top: 9px; }
+      .nav .logo_wrap #btn_menu .orange {
+        background-color: white; }
+      .nav .logo_wrap #btn_menu .red {
+        background-color: white; }
+      .nav .logo_wrap #btn_menu span {
+        -webkit-transition: all 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        -moz-transition: all 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition: all 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        margin-bottom: 10px;
+        display: block;
+        width: 36px;
+        height: 5px; }
+    .nav .logo_wrap #btn_menu.active .orange {
+      -webkit-transform: rotateZ(45deg) translate3d(0, -10px, 0);
+      -moz-transform: rotateZ(45deg) translate3d(0, -10px, 0);
+      -ms-transform: rotateZ(45deg) translate3d(0, -10px, 0);
+      -o-transform: rotateZ(45deg) translate3d(0, -10px, 0);
+      transform: rotateZ(45deg) translate3d(0, -10px, 0); }
+    .nav .logo_wrap #btn_menu.active .red {
+      -webkit-transform: rotateZ(-45deg) translate3d(0, 10px, 0);
+      -moz-transform: rotateZ(-45deg) translate3d(0, 10px, 0);
+      -ms-transform: rotateZ(-45deg) translate3d(0, 10px, 0);
+      -o-transform: rotateZ(-45deg) translate3d(0, 10px, 0);
+      transform: rotateZ(-45deg) translate3d(0, 10px, 0); }
+  .nav ul#menu {
+    padding: 8px 16px 8px 16px;
+    margin-top: 1px;
+    background-color: #887f82;
+    display: block;
+    -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    -webkit-transform: perspective(200px) rotateX(0deg) scale(0.6);
+    -moz-transform: perspective(200px) rotateX(0deg) scale(0.6);
+    -ms-transform: perspective(200px) rotateX(0deg) scale(0.6);
+    -o-transform: perspective(200px) rotateX(0deg) scale(0.6);
+    transform: perspective(200px) rotateX(0deg) scale(0.6);
+    opacity: 0; }
+    .nav ul#menu li {
+      font-size: 12px;
+      margin-bottom: 8px;
+      width: 100%;
+      clear: both;
+      letter-spacing: 1px; }
+      .nav ul#menu li:first-child {
+        margin-top: 14px; }
+      .nav ul#menu li a {
+        -webkit-transition: color 0.3s ease-in;
+        -moz-transition: color 0.3s ease-in;
+        transition: color 0.3s ease-in;
+        font-family: "Cochin";
+        font-weight: 600;
+        font-style: normal;
+        color: white; }
+        .nav ul#menu li a:hover {
+          color: white;
+          font-weight: 500; }
+      .nav ul#menu li .active {
+        color: white; }
+    .nav ul#menu .social {
+      margin-top: 18px;
+      height: 10px; }
+      .nav ul#menu .social a {
+        text-indent: -999em;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: 20px;
+        height: 13px;
+        float: left;
+        margin-right: 10px; }
+  .nav ul#menu.on {
+    -webkit-transform: perspective(200px) rotateX(0deg) scale(1);
+    -moz-transform: perspective(200px) rotateX(0deg) scale(1);
+    -ms-transform: perspective(200px) rotateX(0deg) scale(1);
+    -o-transform: perspective(200px) rotateX(0deg) scale(1);
+    transform: perspective(200px) rotateX(0deg) scale(1);
+    opacity: 1; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  height: 56px;
+  width: 167px;
+  background-color: #535154; }
+
+#main .home {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  z-index: 1;
+  background-color: white; }
+  #main .home .desktop {
+    background-color: pink;
+    height: auto;
+    width: 1024px;
+    margin: 0 auto;
+    position: relative; }
+    #main .home .desktop img {
+      position: relative;
+      top: 100%;
+      margin-top: -771px;
+      max-width: 92%;
+      left: 4%; }
+  #main .home .desktop_wrap {
+    width: 1024px;
+    margin: 0 auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed; }
+    #main .home .desktop_wrap > img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      bottom: 0; }
+    #main .home .desktop_wrap .cover {
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: -771px;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+#main .description {
+  position: relative;
+  z-index: 3;
+  height: 240px;
+  background-color: #afa09e; }
+  #main .description h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 27px;
+    color: white;
+    font-family: "Cochin";
+    letter-spacing: 2px;
+    max-width: 840px;
+    margin: 0 auto; }
+#main > .work {
+  position: relative;
+  z-index: 2;
+  min-height: 1000px;
+  background-color: aqua; }
+#main .resume {
+  position: relative;
+  background-color: white;
+  z-index: 3;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 768px) {
+    #main .resume {
+      height: 900px;
+      position: relative; } }
+  #main .resume::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #main .resume > .work {
+    height: 100%; }
+    #main .resume > .work .skills {
+      margin-bottom: 0px; }
+    @media screen and (max-width: 767px) {
+      #main .resume > .work .work_wrap {
+        padding: 100px 0 80px 0; } }
+    @media screen and (min-width: 768px) {
+      #main .resume > .work .work_wrap {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); } }
+    @media screen and (min-width: 768px) {
+      #main .resume > .work {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 48.821174201%; }
+        #main .resume > .work:last-child {
+          margin-right: 0; } }
+    #main .resume > .work li.title, #main .resume > .work td.title {
+      color: black;
+      font-family: "Raleway", sans-serif;
+      padding-top: 24px;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1px; }
+    #main .resume > .work .intro {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-left: 20px; }
+    #main .resume > .work ul {
+      margin: 0 auto 20px auto; }
+      #main .resume > .work ul li {
+        color: gray;
+        text-align: center; }
+    #main .resume > .work .company {
+      text-transform: uppercase; }
+    #main .resume > .work table {
+      marign: 0 auto;
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        #main .resume > .work table {
+          margin-left: 61px; } }
+      #main .resume > .work table tr .date {
+        padding-top: 10px; }
+      #main .resume > .work table tr td {
+        line-height: 16px;
+        color: gray; }
+        #main .resume > .work table tr td:first-child {
+          text-align: right;
+          padding-right: 20px; }
+        #main .resume > .work table tr td:last-child {
+          text-align: left; }
+        #main .resume > .work table tr td + td.company {
+          padding-top: 10px; }
+  #main .resume .pic {
+    height: 100%;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      #main .resume .pic {
+        display: none; } }
+    @media screen and (min-width: 768px) {
+      #main .resume .pic {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 48.821174201%; }
+        #main .resume .pic:last-child {
+          margin-right: 0; } }
+    #main .resume .pic img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      bottom: 0; }
+
+footer {
+  position: relative;
+  z-index: 4;
+  background-color: #535154;
+  color: white; }
+  footer > p {
+    text-align: center;
+    width: 100%;
+    padding: 0 20px 0 20px;
+    font-size: 14px; }
+  @media screen and (min-width: 768px) {
+    footer {
+      height: 210px; } }
+  footer h3 {
+    color: #909090; }
+  footer ul {
+    padding: 40px 0 40px 0;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    footer ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 768px) {
+      footer ul li {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 31.7615656014%; }
+        footer ul li:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 768px) {
+      footer ul li > div {
+        float: left; } }
+    @media screen and (max-width: 767px) {
+      footer ul li > div {
+        text-align: center; } }
+    footer ul li > div a {
+      display: block; }
+    footer ul li .icon {
+      padding-right: 11px; }
+      @media screen and (min-width: 768px) {
+        footer ul li .icon {
+          border-right: 2px solid #afa09e; } }
+    @media screen and (min-width: 768px) {
+      footer ul li .info {
+        margin: 1px 0 0 11px; } }
+    footer ul li .info h3 {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 12px;
+      color: white; }
+    footer ul li .info p {
+      padding: 0;
+      margin: 8px 0 0 0;
+      color: #909090;
+      font-size: 20px;
+      letter-spacing: 1px; }
+    footer ul li.phone img {
+      margin-top: 10px;
+      width: 39px; }
+    footer ul li.email img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 43px; }
+    footer ul li.blog img {
+      margin: 3px 0 3px 0;
+      width: 50px; }

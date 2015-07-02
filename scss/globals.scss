@@ -1,0 +1,54 @@
+// COlors
+
+$gray: rgb(83,81,84);
+$gray_pink: rgb(175,160,158);
+$menu_gray: rgb(136, 127, 130);
+$text_gray: rgb(128,128,128);
+$text_light_gray: rgb(144,144,144);
+$tile_overlay: rgb(92,80,84);
+
+
+//Media Queries
+$mobile: max-width 767px;
+$tablet: min-width 768px;
+$s_desktop: min-width 1024px;
+$l_desktop: min-width 1240px;
+
+#mfPreviewBar {
+	display:none !important;
+}
+a, p, h1, h2, h3, h4,h5,li, td {
+	font-family:$serif;
+	  -webkit-font-smoothing: antialiased;
+}
+a {
+	text-decoration:none;
+}
+h1, h2, h3 {
+	font-family: $sans-serif;
+	font-weight:400;
+}
+ul {
+	margin:0;padding:0;
+	list-style-type:none;
+
+}
+body {
+	margin:0;
+	font-family:$serif;
+
+}
+
+.fs {
+	min-height:100vh;
+	width:100%;
+}
+.caps {
+	text-transform:uppercase;
+}
+.center {
+	text-align:center !important;
+}
+
+
+
