@@ -5118,7 +5118,7 @@ var viewportSizer = (function($, viewport, Handlebars) {
 			
 			
 		}
-
+		// Stupid z-index issue for the bottom frame and the top frame
 		if(window.scrollY > Math.abs(resumeTop)) {
 			$(".resume").css("opacity", 1);
 		}else {
@@ -5254,15 +5254,20 @@ var viewportSizer = (function($, viewport, Handlebars) {
 				$home.find('.slides').children('li').each(function(index) {
 					elems = [];
 					elems.push($(this));
-					// log();
-					// if($(this).hasClass('fixed_text')) {
+					log();
+					if($(this).hasClass('fixed_text')) {
 						
-					// }else {
+						triggers.push({
+							slide: $(this),
+							left: (width * index),
+							height: (height / numImages)
+						});
+					}else {
 						$(this).css({
 							left: (width * index),
 							height: (height / numImages)
 						});	
-					// }
+					}
 					
 				});
 				resumeTop = $home.height();
